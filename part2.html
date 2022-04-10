@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>CSS inline vs block / pseudo elements/classes</title>
+  </head>
+  <body>
+    <!-- 
+        Inline behaviors:
+        1. you can NOT give width to inline elements
+        2. you can NOT give height to inline elements
+        3. you can NOT give margin top and margin bottom to inline elements
+        4. there is no problem with paddings 
+        5. there is no problem with borders 
+        Block behaviors:
+        1. you CAN give width to block elements
+        2. you CAN give height to inline elements
+        3. you CAN give margin top and margin bottom to inline elements
+        4. there is no problem with paddings
+        5. there is no problem with borders
+
+        Inline-Block behaviors:
+        1. you can give width and height to elements which is styled like - display: inline-block;
+        2. you can give margin on all 4 sides elements which is styled like - display: inline-block
+        3. they allow other elements(inline/inline-block) to be side by side with them
+    -->
+    <!-- inline element - display: inline -->
+    <a href="https://google.com"
+      >this is an inline element asfasfsaf asfasfsa fasfasf</a
+    >
+    <a class="block-a" href="https://google.com">this is an inline element</a>
+    <a href="https://google.com">this is an inline element</a>
+    <a href="https://google.com">this is an inline element</a>
+    <a href="https://google.com">this is an inline element</a>
+
+    <!-- block element - display: block -->
+    <!-- 
+        inline - inline  - ok
+        inline-block - inline-block - ok
+        inline - inline-block - ok
+        inline/inline-block - block - not ok
+        block - block - not ok
+        ok means they can be side by side
+        not ok means they can not be side by side
+    -->
+    <h1>
+      This is a block element asfasfasfasfsa asfsaf asfsaf asfsaf asfsaf asfsaf
+      asfsaf asfsafasfsaf asfsafasfsaf asfsafasfsaf asfsafasfsaf asfsafasfsaf
+      asfsaf
+    </h1>
+    <h1 class="inline-block">This is a block element 1</h1>
+    <h1 class="inline-block">This is a block element 2</h1>
+    <h1>This is a block element</h1>
+    <h1>This is a block element</h1>
+  </body>
+</html>
